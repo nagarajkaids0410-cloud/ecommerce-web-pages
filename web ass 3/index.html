@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Store</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --dark: #1f2937;
+      --light: #f9fafb;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0,0,0,0.5);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+      text-align: center;
+    }
+    .card-body h3 {
+      margin-bottom: 0.5rem;
+    }
+    .card-body button {
+      background: var(--primary);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .card-body button:hover {
+      background: #4338ca;
+    }
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>ShopEZ</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Best Deals Await You!</h1>
+  </section>
+
+  <section id="products" class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" />
+      <div class="card-body">
+        <h3>Stylish Watch</h3>
+        <p>$49.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" />
+      <div class="card-body">
+        <h3>Headphones</h3>
+        <p>$89.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693" />
+      <div class="card-body">
+        <h3>Sneakers</h3>
+        <p>$69.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 ShopEZ. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
